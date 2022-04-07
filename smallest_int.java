@@ -1,7 +1,6 @@
 package lab_projects;
 
 import java.util.*;
-import java.util.logging.LogManager;
 
 class smallest_int {
     int m, n;
