@@ -1,7 +1,4 @@
-package lab_projects;
-
 import java.util.*;
-
 class smallest_int {
     int m, n;
 

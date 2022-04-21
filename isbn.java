@@ -1,5 +1,3 @@
-package lab_projects;
-
 import java.util.*;
 
 public class isbn {
