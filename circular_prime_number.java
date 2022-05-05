@@ -76,7 +76,7 @@ public class circular_prime_number {
             int digitCount = getDigitCount(n);
             int divisor = (int) (Math.pow(10, digitCount-1));
             int n2 = n;
-            for (int i = 0; i < digitCount i++) {
+            for (int i = 0; i < digitCount; i++) {
                 int t1 = n2/divisor;
                 int t2 = n2%divisor;
                 n2 = t2 * 10 + t1;
