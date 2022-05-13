@@ -58,7 +58,7 @@ public class isbn {
     }
 
     public static void main(String[] args) {
-        isbn ib = new isbn();
-        ib.input();
+        isbn obj1 = new isbn();
+        obj1.input();
     }
 }

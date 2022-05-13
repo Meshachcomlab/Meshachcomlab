@@ -1,4 +1,3 @@
-
 // ex:5
 // Cartons Break-Up
 /*
@@ -65,7 +64,7 @@ public class cartons_breakUP {
     }
 
     public static void main(String[] args) {
-        cartons_breakUP c = new cartons_breakUP();
-        c.input();
+        cartons_breakUP obj5 = new cartons_breakUP();
+        obj5.input();
     }
 }

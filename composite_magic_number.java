@@ -77,7 +77,7 @@ public class composite_magic_number {
   }
 
   public static void main(String[] args) {
-    composite_magic_number ob = new composite_magic_number();
-    ob.input();
+    composite_magic_number obj2 = new composite_magic_number();
+    obj2.input();
   }
 }
