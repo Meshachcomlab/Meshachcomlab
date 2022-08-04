@@ -1,5 +1,4 @@
 
-
 // ex:9
 import java.util.*;
 
@@ -10,10 +9,10 @@ public class fascinating_number {
         int m = in.nextInt();
         System.out.print("\tn = ");
         int n = in.nextInt();
-        if(m>99&&n>99&&m<10000&&n<10000){
+        if (m > 99 && n > 99 && m < 10000 && n < 10000) {
             System.out.println("OUTPUT: The fascinating numbers are: ");
-        number(m, n);
-        }else{
+            number(m, n);
+        } else {
             System.out.println("INVALID! Try again");
             input();
         }
@@ -32,7 +31,7 @@ public class fascinating_number {
                 count++;
             }
         }
-        System.out.println("\nFREGUENCY OF FASCINATING NUMBER IS: "+count);
+        System.out.println("\nFREGUENCY OF FASCINATING NUMBER IS: " + count);
     }
 
     boolean check(String sum) {
