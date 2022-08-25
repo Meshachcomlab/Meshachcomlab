@@ -36,7 +36,7 @@ public class index {
         return state;
     }
     public static void main(String[] args) {
-number(100,200);
-System.out.println(check("273"));
+     int x = 0;
+     System.out.println();
     }
 }
