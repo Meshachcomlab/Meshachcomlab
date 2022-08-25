@@ -1,4 +1,3 @@
-
 // ex:10
 import java.util.*;
 
