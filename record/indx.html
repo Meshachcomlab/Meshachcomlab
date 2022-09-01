@@ -1,13 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Record CS</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <i>ISC-Computer</i>
+    <section class="pg">
+      <h3 class="ex h">Ex.No:1</h3>
+      <h1 class="head h">International Standard Book Number (ISBN)</h1>
+      <h4 class="sub">Aim:</h4>
+      <div class="aim">
+        <h5>
+          &emsp; &emsp;Develop a program to accept a ten-digit code and check
+          whether it's a valid isbn code
+        </h5>
+      </div>
+      <h4 class="sub">Algorithm:</h4>
+      <div class="algo">
+        <p>
+          1. start <br />
+          2. Input m and n <br />
+          3. If(m<1 or n<1 or m>n) then print "INVALID INPUT" and goto step 20
+          <br />
+          4. count = 0 <br />
+          5. Initialize a,sum and i as 0 and k as 10 <br />
+          6. Set a loop i from m to n and repeat steps 7 to 10 <br />
+          7. Seperate i^th character of s and assign to ch <br />
+          8. if(ch=="x") then a =10 else a = integer value of ch <br />
+          9. sum = sum + a*k; <br />
+          10. k-=1 <br />
+          11. Print sum <br />
+          12. if(sum%11 == 0 ) then print "Leaves No Remainder - Valid ISBN
+          CODE"; else Print "Leaves Remainder -INVALID ISBN CODE" <br />
+          13. Stop <br />
+        </p>
+      </div>
+      <h4 class="sub">Program:</h4>
+      <div class="prog">
+        <p>
+          import java.util.*; <br />
+          <br />
+
+          public class isbn {<br />
+          &emsp; void input() {<br />
+          &emsp;&emsp; Scanner in = new Scanner(System.in);<br />
+          &emsp;&emsp; System.out.println("Enter the isbn code");<br />
+          &emsp;&emsp; String s = in.nextLine(); //Input Number<br />
+          &emsp;&emsp; int l = s.length();<br />
+          &emsp;if (l != 10) { //Comparing if the number of digits is 10<br />
+          &emsp;&emsp;&emsp; System.out.println("Invalid input");<br />
+          &emsp; } else {<br />
+          &emsp;&emsp;&emsp; process(s);<br />
+          &emsp;&emsp;&emsp;}<br />
+          }<br /><br />
+
+          void process(String s) {<br />
+          &emsp;&emsp; String ch;<br />
+          &emsp;&emsp; int a = 0, sum = 0, k = 10, l = s.length();<br />
+          &emsp;for (int i = 0; i < l; i++) {<br />
+          &emsp;&emsp;&emsp;ch = Character.toString(s.charAt(i)); //Character
+          Seperation<br />
+          &emsp;&emsp;if (ch.equalsIgnoreCase("X")) { // To check if the last
+          digit is 'X' or not<br />
+          &emsp;&emsp;&emsp;&emsp; a = 10;<br />
+          &emsp;&emsp; } else {<br />
+          &emsp;&emsp;&emsp;&emsp; a = Integer.parseInt(ch); //Converting to
+          respective integer<br />
+          &emsp;&emsp;&emsp;&emsp; sum = sum + a * k; //Calculating sum<br />
+          &emsp;&emsp;&emsp;&emsp; k--;//Decrementing k<br />
+          &emsp;&emsp;&emsp;}<br />
+
+          }<br />
+          &emsp;&emsp;&emsp;System.out.println("OUTPUT: Sum =" + sum);<br />
+          &emsp;if (sum % 11 == 0) { //comparing if the sum is divisible by
+          11<br />
+          &emsp;&emsp; System.out.println("Leaves No Remainder -VALID ISBN
+          CODE");<br />
+          &emsp; } else {<br />
+          &emsp;&emsp; System.out.println("Leaves Remainder -INVALID ISBN
+          CODE");<br />
+          &emsp;&emsp;}<br />
+          &emsp;}<br /><br />
+
+          public static void main(String[] args) {<br />
+          &emsp;&emsp;&emsp; isbn obj1 = new isbn();<br />
+          &emsp;&emsp;&emsp; obj1.input();<br />
+          &emsp;&emsp;}<br />
+          }<br />
+        </p>
+      </div>
+      <h4 class="sub">Variable Description:</h4>
+      <div class="vd">
+        <table>
+          <tr>
+            <th>variable</th>
+            <th>Data Type</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>s</td>
+            <td>String</td>
+            <td>Code to be checked</td>
+          </tr>
+          <tr>
+            <td>l</td>
+            <td>int </td>
+            <td>Length of the code</td>
+          </tr>
+          <tr>
+            <td>ch</td>
+            <td>char</td>
+            <td>Character from the code</td>
+          </tr>
+          <tr>
+            <td>sum</td>
+            <td>int </td>
+            <td>Sum of the code</td>
+          </tr>
+          <tr>
+            <td>a</td>
+            <td>int</td>
+            <td>Integer value of the extracted character</td>
+          </tr>
+        </table>
+      </div>
+      <h4 class="sub">Output:</h4>
+      <div class="out"></div>
+      <h4 class="sub">Report:</h4>
+      <div class="report"></div>
+    </section>
+  </body>
 </html>
+<!-- 
+<section class="pg">
+    <h3 class="ex"></h3>
+    <h1 class="head"></h1>
+    <h4 class="sub">Aim:</h4>
+    <div class="aim"></div>
+    <h4 class="sub">Algorithm:</h4>
+    <div class="algo"></div>
+    <h4 class="sub">Program:</h4>
+    <div class="prog"></div>
+    <h4 class="sub">Variable Description:</h4>
+    <div class="vd"></div>
+    <h4 class="sub">Output:</h4>
+    <div class="out"></div>
+    <h4 class="sub">Report:</h4>
+    <div class="report"></div>
+</section> -->

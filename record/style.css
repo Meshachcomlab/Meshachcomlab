@@ -1,12 +1,37 @@
+@font-face {
+    font-family: txt;
+    src: url(./assets/font/Roboto-Regular.ttf);
+}
 *{
     padding: 0;
     margin: 0;
+    font-family: txt;
+    font-size: 1.4vw;
 }
 body{
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     flex-direction: column;
     height: 100vh;
     width: 100vw;
+}
+section {
+    min-height: 90vh;
+    min-width: 85vw;
+    display: block;
+}
+.sub,.h{
+    text-decoration: underline;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: max-content;
+  }
+  td{
+    padding: 0px 10px;
+  }
+th{
+    padding:0px 20px ;
 }
