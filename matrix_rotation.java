@@ -1,3 +1,4 @@
+
 // ex:12
 import java.util.*;
 
@@ -22,7 +23,7 @@ public class matrix_rotation {
             display(A);
             System.out.println("ROTATED MATRIX ");
             display(rotate(A));
-
+            corner(A);
         } else {
             System.out.println("INVALID! try again");
             input();
@@ -50,6 +51,19 @@ public class matrix_rotation {
             }
             System.out.println();
         }
+    }
+
+    void corner(int A[][]) {
+        int sum = 0;
+        for (int i = 0; i < A.length; i++) {
+            for (int j = 0; j < A[i].length; j++) {
+                if (i == 0 && j == 0 || i == A.length - 1 && j == A.length - 1 || i == 0 && j == A.length - 1
+                        || i == A.length - 1 && j == 0) {
+                    sum += A[i][j];
+                }
+            }
+        }
+        System.out.println("The sum of corner elements: " + sum);
     }
 
     public static void main(String[] args) {
