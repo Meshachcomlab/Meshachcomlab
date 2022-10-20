@@ -1,42 +1,28 @@
-public class index {
+class index {
+    static String sent = "This is The Sentence";
 
-    
-    static void number(int m, int n) {
-        boolean state = false;
-        String sum = "";
-        for (int i = m; i <= n; i++) {
-            sum = "";
-            for (int j = 1; j <= 3; j++) {
-                sum += (i * j);
-            
-             state = check(sum);
-             if(state){
-                System.out.println(i+" ");
-             }
-        }
+    static int f = 0;
+
+    static boolean isCap(String w) {
+        if (Character.isUpperCase(w.charAt(0)))
+            return true;
+        return false;
     }
-    }
-    static boolean check(String sum) {
-        boolean state = false;
-        int a[] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-        for (int i = 0; i < sum.length(); i++) {
-            for (int j = 1; j <= 9; j++) {
-                if (Integer.parseInt(String.valueOf(sum.charAt(i))) == j) {
-                    a[j - 1] = (a[j - 1] + 1);
-                }
-            }
-        }
-        for (int i = 0; i < a.length; i++) {
-            if (a[i] == 1) {
-                state = true;
-            } else {
-                state = false;
-            }
-        }
-        return state;
-    }
+
     public static void main(String[] args) {
-     int x = 0;
-     System.out.println();
+        sent = sent.trim();
+        sent += " ";
+        String s = "";
+        int b = 0;
+        for (int i = 0; i < sent.length(); i++) {
+            if (Character.isWhitespace(sent.charAt(i))) {
+                s = sent.substring(b, i).trim();
+                b = i;
+                System.out.println(s);
+                if(isCap(s))
+                f++;
+            }
+        }
+        System.out.println("The number of the words with caps :"+f);
     }
 }

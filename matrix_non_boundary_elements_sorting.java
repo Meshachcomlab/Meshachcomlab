@@ -36,7 +36,7 @@ public class matrix_non_boundary_elements_sorting {
         out: for (int i = 0; i < a.length; i++) {
             if (x <= (a.length - 2) * (a.length - 2)) {
                 in: for (int j = 0; j < a[i].length; j++) {
-                    if (i != 0 && j != 0 && i != a.length - 1 && j != a.length - 1) {
+                    if ((i != 0 && j != 0 && i != a.length - 1 && j != a.length - 1)) {
                         aa[x] = a[i][j];
                         ++x;
                     }
