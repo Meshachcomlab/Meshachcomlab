@@ -28,12 +28,12 @@ public class fill_the_matrix {
     void matrix() {
         for (int i = 0; i < A.length; i++) {
             for (int j = 0; j < A[i].length; j++) {
-                if ((i == 0 || j == 0) && (i == A[i].length - 1 || j == A[i].length - 1)&&(i==j)) {
+                if (((i == 0 || j == 0) && (i == A[i].length - 1 || j == A[i].length - 1))||(i == 0 && j == 0)||(i == A[i].length - 1 && j == A[i].length - 1)) {
                     A[i][j] = ch[0];
-                } else if (i % 2 == 0 || j == 0 || j == A[i].length - 1) {
-                    A[i][j] = ch[1];
-                } else {
+                } else if (i != 0 && j != 0 && i != A[i].length - 1 && j != A[i].length - 1) {
                     A[i][j] = ch[2];
+                } else {
+                    A[i][j] = ch[1];
                 }
             }
         }
