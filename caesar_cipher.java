@@ -17,7 +17,11 @@ public class caesar_cipher {
     void proces() {
         for (int i = 0; i < str.length(); i++) {
             if (Character.isLetter(str.charAt(i))) {
-                nstr+=(char) (str.charAt(i)+103);
+                if(str.charAt(i) < 'n'||str.charAt(i)<'N')
+                nstr+=(char) (str.charAt(i)+13);
+                else{
+                    nstr+=(char) (str.charAt(i)-13);
+                }
             }
             else{
                 nstr+=str.charAt(i);
@@ -29,7 +33,6 @@ public class caesar_cipher {
     public static void main(String[] args) {
         caesar_cipher obj20 = new caesar_cipher();
         System.out.println("INPUT:");
-        // obj20.input();
-        System.out.println('a'+102);
+        obj20.input();
     }
 }
