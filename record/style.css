@@ -1,37 +1,45 @@
 @font-face {
-    font-family: txt;
-    src: url(./assets/font/Roboto-Regular.ttf);
+  font-family: txt;
+  src: url(./assets/font/Roboto-Regular.ttf);
 }
-*{
-    padding: 0;
-    margin: 0;
-    font-family: txt;
-    font-size: 1.4vw;
+* {
+  padding: 0;
+  margin: 0;
+  font-family: txt;
+  font-size: 1.2rem;
 }
-body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 100vh;
-    width: 100vw;
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
 }
 section {
-    min-height: 90vh;
-    min-width: 85vw;
-    display: block;
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  box-sizing: border-box;
+  padding: 5vh 15vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
-.sub,.h{
-    text-decoration: underline;
+.sub,
+.h {
+  text-decoration: underline;
 }
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-    width: max-content;
-  }
-  td{
-    padding: 0px 10px;
-  }
-th{
-    padding:0px 20px ;
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: max-content;
+}
+td {
+  padding: 0px 10px;
+}
+th {
+  padding: 0px 20px;
 }
