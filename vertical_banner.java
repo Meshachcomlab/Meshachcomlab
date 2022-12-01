@@ -14,7 +14,7 @@ public class vertical_banner {
     str = new String[N];
     
     for (int i = 0; i < str.length; i++) {
-        System.out.println("Team "+(/*buffer prob*/in.nextInt())+":");
+        System.out.println("Team "+(in.nextInt())+":");
         str[i] = in.next();
     }
   }
